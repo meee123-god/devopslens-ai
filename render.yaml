@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: devopslens-ai-frontend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend/dashboard.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: API_BASE_URL
+        sync: false
