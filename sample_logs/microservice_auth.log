@@ -1,0 +1,11 @@
+2026-10-29 10:00:01,001 [INFO] [auth-core] Authentication microservice starting up version 2.4.1.
+2026-10-29 10:00:15,123 [INFO] [auth-core] Health check passed on port 9000.
+2026-10-29 10:01:02,400 [WARNING] [rate-limiter] Rate limit warning: 45 requests/min from IP 198.51.100.42.
+2026-10-29 10:01:05,512 [WARNING] [rate-limiter] Rate limit warning: 60 requests/min from IP 198.51.100.42.
+2026-10-29 10:01:08,781 [WARNING] [rate-limiter] Rate limit warning: 75 requests/min from IP 198.51.100.42.
+2026-10-29 10:02:11,310 [ERROR] [jwt-validator] JWT signature validation failed: token has expired for user_id=4091.
+2026-10-29 10:02:14,650 [ERROR] [jwt-validator] JWT signature validation failed: token has expired for user_id=8912.
+2026-10-29 10:02:18,901 [ERROR] [jwt-validator] JWT signature validation failed: token has expired for user_id=3144.
+2026-10-29 10:03:00,105 [CRITICAL] [redis-session] Redis cluster unreachable at redis-primary:6379: connection refused.
+2026-10-29 10:03:05,221 [CRITICAL] [redis-session] Redis cluster unreachable at redis-primary:6379: connection refused.
+2026-10-29 10:03:10,311 [INFO] [auth-core] Fallback to in-memory session token store activated.

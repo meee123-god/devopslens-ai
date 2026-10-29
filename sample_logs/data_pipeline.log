@@ -1,0 +1,8 @@
+2026-10-29 11:30:00,010 [INFO] [etl-orchestrator] Starting scheduled ingestion pipeline batch #89102.
+2026-10-29 11:30:15,441 [INFO] [kafka-source] Subscribed to topic 'telemetry_events' with 8 partitions.
+2026-10-29 11:31:02,112 [WARNING] [schema-validator] Data parsing warning: column 'discount' cast null on row 1420.
+2026-10-29 11:31:05,890 [WARNING] [schema-validator] Data parsing warning: column 'discount' cast null on row 1580.
+2026-10-29 11:32:00,500 [ERROR] [kafka-consumer] KafkaConsumer failed to commit offset for partition 4: CommitFailedException (broker timeout).
+2026-10-29 11:32:05,612 [ERROR] [kafka-consumer] KafkaConsumer failed to commit offset for partition 4: CommitFailedException (broker timeout).
+2026-10-29 11:32:30,119 [CRITICAL] [storage-monitor] Disk space critical: /mnt/data volume has less than 2% free space remaining (limit=500GB).
+2026-10-29 11:33:00,000 [INFO] [etl-orchestrator] Pipeline paused due to storage threshold alert.

@@ -1,0 +1,42 @@
+name: DevOpsLens AI Continuous Integration
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  test:
+    name: Build, Lint and Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Verify Python syntax and compilation
+        run: |
+          python -m compileall app/ frontend/ tests/
+
+      - name: Run Pytest suite with code coverage
+        env:
+          ENVIRONMENT: testing
+          AI_PROVIDER: offline
+          DATABASE_URL: sqlite:///./test_ci.db
+        run: |
+          pytest -v --cov=app --cov-report=term-missing

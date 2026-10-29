@@ -1,0 +1,15 @@
+2026-10-29 09:15:01,102 [INFO] [web-gateway] Service initialized successfully on port 8080.
+2026-10-29 09:15:05,214 [DEBUG] [auth-middleware] Validated bearer token for user_id=10243.
+2026-10-29 09:15:10,342 [INFO] [catalog-service] Retrieved 48 items for category 'electronics'.
+2026-10-29 09:15:22,810 [WARNING] [cache-manager] Redis cache miss for key 'product_catalog_v2'; fetching from database.
+2026-10-29 09:15:45,901 [WARNING] [metrics-collector] Process memory utilization reached 82% threshold (limit=2048MB).
+2026-10-29 09:16:02,115 [INFO] [order-service] Received checkout request for cart_id=78291, amount=$149.99.
+2026-10-29 09:16:05,441 [ERROR] [database-pool] Connection to PostgreSQL failed at 10.0.4.12:5432 after 10000ms: pool exhausted (active=50, max=50).
+2026-10-29 09:16:06,102 [ERROR] [order-service] Database connection failed while persisting order #78291. Transaction rolled back.
+2026-10-29 09:16:12,305 [ERROR] [database-pool] Connection to PostgreSQL failed at 10.0.4.12:5432 after 10000ms: pool exhausted (active=50, max=50).
+2026-10-29 09:16:15,671 [ERROR] [database-pool] Connection to PostgreSQL failed at 10.0.4.12:5432 after 10000ms: pool exhausted (active=50, max=50).
+2026-10-29 09:16:20,890 [ERROR] [order-service] Database connection failed while persisting order #78294. Transaction rolled back.
+2026-10-29 09:16:25,114 [ERROR] [database-pool] Connection to PostgreSQL failed at 10.0.4.12:5432 after 10000ms: pool exhausted (active=50, max=50).
+2026-10-29 09:16:30,001 [CRITICAL] [order-service] Fatal crash in worker thread pool: java.lang.OutOfMemoryError: Java heap space.
+2026-10-29 09:16:35,420 [INFO] [health-check] Probing liveness probe /healthz - status 503 SERVICE UNAVAILABLE.
+2026-10-29 09:16:40,119 [WARNING] [circuit-breaker] Circuit breaker 'order-db-pool' state transitioned from CLOSED to OPEN.
